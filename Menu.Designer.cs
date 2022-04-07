@@ -34,10 +34,10 @@
             this.rbFiltrLeva = new System.Windows.Forms.RadioButton();
             this.rbFiltrPrava = new System.Windows.Forms.RadioButton();
             this.lbFiltrKlub = new System.Windows.Forms.Label();
-            this.cboxFiltraceKlub = new System.Windows.Forms.ComboBox();
-            this.cboxFiltraceLigaKlubu = new System.Windows.Forms.ComboBox();
+            this.cmbFiltraceKlub = new System.Windows.Forms.ComboBox();
+            this.cmbFiltraceLigaKlubu = new System.Windows.Forms.ComboBox();
             this.lbFiltrLigaKlubu = new System.Windows.Forms.Label();
-            this.cboxFiltraceZemeKLubu = new System.Windows.Forms.ComboBox();
+            this.cmbFiltraceZemeKLubu = new System.Windows.Forms.ComboBox();
             this.lbFiltrZemeKlubu = new System.Windows.Forms.Label();
             this.lbFiltrMaxVyska = new System.Windows.Forms.Label();
             this.lbFiltrMaxVaha = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.lbVyska = new System.Windows.Forms.Label();
             this.lbZemeNarozeni = new System.Windows.Forms.Label();
             this.lbDatumNarozeni = new System.Windows.Forms.Label();
-            this.cboxFiltrPozice = new System.Windows.Forms.ComboBox();
+            this.cmbFiltrPozice = new System.Windows.Forms.ComboBox();
             this.cbFiltrace = new System.Windows.Forms.CheckBox();
             this.btUlozit = new System.Windows.Forms.Button();
             this.btNovaPolozka = new System.Windows.Forms.Button();
@@ -74,6 +74,7 @@
             this.btSmazat = new System.Windows.Forms.Button();
             this.lboxFiltr = new System.Windows.Forms.ListBox();
             this.lboxPolozky = new System.Windows.Forms.ListBox();
+            this.btKonec = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxVaha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxVyska)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinVaha)).BeginInit();
@@ -138,25 +139,25 @@
             this.lbFiltrKlub.TabIndex = 102;
             this.lbFiltrKlub.Text = "Klub:";
             // 
-            // cboxFiltraceKlub
+            // cmbFiltraceKlub
             // 
-            this.cboxFiltraceKlub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxFiltraceKlub.Enabled = false;
-            this.cboxFiltraceKlub.FormattingEnabled = true;
-            this.cboxFiltraceKlub.Location = new System.Drawing.Point(949, 445);
-            this.cboxFiltraceKlub.Name = "cboxFiltraceKlub";
-            this.cboxFiltraceKlub.Size = new System.Drawing.Size(88, 26);
-            this.cboxFiltraceKlub.TabIndex = 101;
+            this.cmbFiltraceKlub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltraceKlub.Enabled = false;
+            this.cmbFiltraceKlub.FormattingEnabled = true;
+            this.cmbFiltraceKlub.Location = new System.Drawing.Point(949, 445);
+            this.cmbFiltraceKlub.Name = "cmbFiltraceKlub";
+            this.cmbFiltraceKlub.Size = new System.Drawing.Size(88, 26);
+            this.cmbFiltraceKlub.TabIndex = 101;
             // 
-            // cboxFiltraceLigaKlubu
+            // cmbFiltraceLigaKlubu
             // 
-            this.cboxFiltraceLigaKlubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxFiltraceLigaKlubu.Enabled = false;
-            this.cboxFiltraceLigaKlubu.FormattingEnabled = true;
-            this.cboxFiltraceLigaKlubu.Location = new System.Drawing.Point(949, 414);
-            this.cboxFiltraceLigaKlubu.Name = "cboxFiltraceLigaKlubu";
-            this.cboxFiltraceLigaKlubu.Size = new System.Drawing.Size(88, 26);
-            this.cboxFiltraceLigaKlubu.TabIndex = 100;
+            this.cmbFiltraceLigaKlubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltraceLigaKlubu.Enabled = false;
+            this.cmbFiltraceLigaKlubu.FormattingEnabled = true;
+            this.cmbFiltraceLigaKlubu.Location = new System.Drawing.Point(949, 414);
+            this.cmbFiltraceLigaKlubu.Name = "cmbFiltraceLigaKlubu";
+            this.cmbFiltraceLigaKlubu.Size = new System.Drawing.Size(88, 26);
+            this.cmbFiltraceLigaKlubu.TabIndex = 100;
             // 
             // lbFiltrLigaKlubu
             // 
@@ -167,15 +168,15 @@
             this.lbFiltrLigaKlubu.TabIndex = 99;
             this.lbFiltrLigaKlubu.Text = "Liga klubu:";
             // 
-            // cboxFiltraceZemeKLubu
+            // cmbFiltraceZemeKLubu
             // 
-            this.cboxFiltraceZemeKLubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxFiltraceZemeKLubu.Enabled = false;
-            this.cboxFiltraceZemeKLubu.FormattingEnabled = true;
-            this.cboxFiltraceZemeKLubu.Location = new System.Drawing.Point(948, 382);
-            this.cboxFiltraceZemeKLubu.Name = "cboxFiltraceZemeKLubu";
-            this.cboxFiltraceZemeKLubu.Size = new System.Drawing.Size(88, 26);
-            this.cboxFiltraceZemeKLubu.TabIndex = 98;
+            this.cmbFiltraceZemeKLubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltraceZemeKLubu.Enabled = false;
+            this.cmbFiltraceZemeKLubu.FormattingEnabled = true;
+            this.cmbFiltraceZemeKLubu.Location = new System.Drawing.Point(948, 382);
+            this.cmbFiltraceZemeKLubu.Name = "cmbFiltraceZemeKLubu";
+            this.cmbFiltraceZemeKLubu.Size = new System.Drawing.Size(88, 26);
+            this.cmbFiltraceZemeKLubu.TabIndex = 98;
             // 
             // lbFiltrZemeKlubu
             // 
@@ -450,20 +451,20 @@
             this.lbDatumNarozeni.TabIndex = 66;
             this.lbDatumNarozeni.Text = "Datum narození: ?";
             // 
-            // cboxFiltrPozice
+            // cmbFiltrPozice
             // 
-            this.cboxFiltrPozice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxFiltrPozice.Enabled = false;
-            this.cboxFiltrPozice.FormattingEnabled = true;
-            this.cboxFiltrPozice.Items.AddRange(new object[] {
+            this.cmbFiltrPozice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltrPozice.Enabled = false;
+            this.cmbFiltrPozice.FormattingEnabled = true;
+            this.cmbFiltrPozice.Items.AddRange(new object[] {
             "brankář",
             "obránce",
             "záložník",
             "útočník"});
-            this.cboxFiltrPozice.Location = new System.Drawing.Point(949, 350);
-            this.cboxFiltrPozice.Name = "cboxFiltrPozice";
-            this.cboxFiltrPozice.Size = new System.Drawing.Size(88, 26);
-            this.cboxFiltrPozice.TabIndex = 65;
+            this.cmbFiltrPozice.Location = new System.Drawing.Point(949, 350);
+            this.cmbFiltrPozice.Name = "cmbFiltrPozice";
+            this.cmbFiltrPozice.Size = new System.Drawing.Size(88, 26);
+            this.cmbFiltrPozice.TabIndex = 65;
             // 
             // cbFiltrace
             // 
@@ -514,6 +515,7 @@
             this.btSmazat.TabIndex = 60;
             this.btSmazat.Text = "Smazat";
             this.btSmazat.UseVisualStyleBackColor = true;
+            this.btSmazat.Click += new System.EventHandler(this.btSmazat_Click);
             // 
             // lboxFiltr
             // 
@@ -535,21 +537,32 @@
             this.lboxPolozky.TabIndex = 58;
             this.lboxPolozky.SelectedIndexChanged += new System.EventHandler(this.lboxPolozky_SelectedIndexChanged);
             // 
+            // btKonec
+            // 
+            this.btKonec.Location = new System.Drawing.Point(539, 574);
+            this.btKonec.Name = "btKonec";
+            this.btKonec.Size = new System.Drawing.Size(186, 80);
+            this.btKonec.TabIndex = 107;
+            this.btKonec.Text = "Ukončit Aplikaci";
+            this.btKonec.UseVisualStyleBackColor = true;
+            this.btKonec.Click += new System.EventHandler(this.btKonec_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 674);
+            this.ClientSize = new System.Drawing.Size(1264, 666);
             this.ControlBox = false;
+            this.Controls.Add(this.btKonec);
             this.Controls.Add(this.btVybrat);
             this.Controls.Add(this.cbOceneni);
             this.Controls.Add(this.rbFiltrLeva);
             this.Controls.Add(this.rbFiltrPrava);
             this.Controls.Add(this.lbFiltrKlub);
-            this.Controls.Add(this.cboxFiltraceKlub);
-            this.Controls.Add(this.cboxFiltraceLigaKlubu);
+            this.Controls.Add(this.cmbFiltraceKlub);
+            this.Controls.Add(this.cmbFiltraceLigaKlubu);
             this.Controls.Add(this.lbFiltrLigaKlubu);
-            this.Controls.Add(this.cboxFiltraceZemeKLubu);
+            this.Controls.Add(this.cmbFiltraceZemeKLubu);
             this.Controls.Add(this.lbFiltrZemeKlubu);
             this.Controls.Add(this.lbFiltrMaxVyska);
             this.Controls.Add(this.lbFiltrMaxVaha);
@@ -578,7 +591,7 @@
             this.Controls.Add(this.lbVyska);
             this.Controls.Add(this.lbZemeNarozeni);
             this.Controls.Add(this.lbDatumNarozeni);
-            this.Controls.Add(this.cboxFiltrPozice);
+            this.Controls.Add(this.cmbFiltrPozice);
             this.Controls.Add(this.cbFiltrace);
             this.Controls.Add(this.btUlozit);
             this.Controls.Add(this.btNovaPolozka);
@@ -613,10 +626,10 @@
         private System.Windows.Forms.RadioButton rbFiltrLeva;
         private System.Windows.Forms.RadioButton rbFiltrPrava;
         private System.Windows.Forms.Label lbFiltrKlub;
-        private System.Windows.Forms.ComboBox cboxFiltraceKlub;
-        private System.Windows.Forms.ComboBox cboxFiltraceLigaKlubu;
+        private System.Windows.Forms.ComboBox cmbFiltraceKlub;
+        private System.Windows.Forms.ComboBox cmbFiltraceLigaKlubu;
         private System.Windows.Forms.Label lbFiltrLigaKlubu;
-        private System.Windows.Forms.ComboBox cboxFiltraceZemeKLubu;
+        private System.Windows.Forms.ComboBox cmbFiltraceZemeKLubu;
         private System.Windows.Forms.Label lbFiltrZemeKlubu;
         private System.Windows.Forms.Label lbFiltrMaxVyska;
         private System.Windows.Forms.Label lbFiltrMaxVaha;
@@ -645,7 +658,7 @@
         private System.Windows.Forms.Label lbVyska;
         private System.Windows.Forms.Label lbZemeNarozeni;
         private System.Windows.Forms.Label lbDatumNarozeni;
-        private System.Windows.Forms.ComboBox cboxFiltrPozice;
+        private System.Windows.Forms.ComboBox cmbFiltrPozice;
         private System.Windows.Forms.CheckBox cbFiltrace;
         private System.Windows.Forms.Button btUlozit;
         private System.Windows.Forms.Button btNovaPolozka;
@@ -653,6 +666,7 @@
         private System.Windows.Forms.Button btSmazat;
         private System.Windows.Forms.ListBox lboxFiltr;
         private System.Windows.Forms.ListBox lboxPolozky;
+        private System.Windows.Forms.Button btKonec;
     }
 }
 

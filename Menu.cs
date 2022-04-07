@@ -14,8 +14,11 @@ namespace I4_Janečka_Dinh_Skupinovka
     public partial class Menu : Form
     {
         public static string connectionString;
+        SqlConnection connectionCommand;
         List<Fotbalista> listFotbalistu = new List<Fotbalista>();
         Fotbalista fotbalista;
+
+
         public Menu()
         {
             InitializeComponent();
@@ -32,14 +35,12 @@ namespace I4_Janečka_Dinh_Skupinovka
         {
             listFotbalistu.Clear();
             lboxPolozky.Items.Clear();
-
-            connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = H:\JJ_TD_Fotbalisti.mdf; Integrated Security = True; Connect Timeout = 30";
-            SqlConnection connectionCommand = new SqlConnection(connectionString);
+            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dj-ku\Desktop\aaaa\JJ_TD_Fotbalisti.mdf;Integrated Security=True;Connect Timeout=30";
+            connectionCommand = new SqlConnection(connectionString);
             string selectionStringFotbalista = "SELECT * FROM [Fotbalista]";
             SqlCommand selectionCommand = new SqlCommand(selectionStringFotbalista, connectionCommand);
             connectionCommand.Open();
             SqlDataReader readCommand = selectionCommand.ExecuteReader();
-            //SqlDataReader readCommandKlubID = selectionCommandKlubID.ExecuteReader();
             while (readCommand.Read())
             {
                 listFotbalistu.Add(fotbalista = new Fotbalista((string)readCommand["Jmeno"], (string)readCommand["Prijmeni"], (DateTime)readCommand["DatumNarozeni"], (int)readCommand[4], (int)readCommand[5], (int)readCommand[6], (bool)readCommand[7], (int)readCommand[8], (int)readCommand[9], (int)readCommand[10], (int)readCommand[11], (int)readCommand[12], (bool)readCommand[13], (bool)readCommand[14]));
@@ -99,6 +100,37 @@ namespace I4_Janečka_Dinh_Skupinovka
             NovaPolozka novaPolozka = new NovaPolozka();
             novaPolozka.ShowDialog();
             Clear();
+        }
+
+        private void btSmazat_Click(object sender, EventArgs e)
+        {
+            string Prikaz = "DELETE FROM [Fotbalista]  WHERE Id = " + GetID();
+            connectionCommand.Open();
+            SqlCommand prikaz = new SqlCommand(Prikaz, connectionCommand);
+            prikaz.ExecuteNonQuery();
+            connectionCommand.Close();
+            Clear();
+        }
+
+        private int GetID()
+        {
+            int id = 0;
+            connectionCommand.Open();
+            string getRegionIDString = "SELECT * FROM [Fotbalista]";
+            SqlCommand getRegionIDCommand = new SqlCommand(getRegionIDString, connectionCommand);
+            SqlDataReader getRegionIDReader = getRegionIDCommand.ExecuteReader();
+            while (getRegionIDReader.Read())
+            {
+                if (listFotbalistu[lboxPolozky.SelectedIndex].jmeno == getRegionIDReader["Jmeno"].ToString())
+                    id = Convert.ToInt32(getRegionIDReader["Id"]);
+            }
+            connectionCommand.Close();
+            return id;
+        }
+
+        private void btKonec_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

@@ -41,11 +41,6 @@
             this.tbJmeno = new System.Windows.Forms.TextBox();
             this.lbPrijmeni = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbZemeNarozeni = new System.Windows.Forms.TextBox();
-            this.tbDatumNarozeni = new System.Windows.Forms.TextBox();
-            this.tbZemeKlubu = new System.Windows.Forms.TextBox();
-            this.tbLigaKlubu = new System.Windows.Forms.TextBox();
-            this.tbKlub = new System.Windows.Forms.TextBox();
             this.lbCisloDresu = new System.Windows.Forms.Label();
             this.lbPozice = new System.Windows.Forms.Label();
             this.lbKlub = new System.Windows.Forms.Label();
@@ -57,6 +52,11 @@
             this.lbDatumNarozeni = new System.Windows.Forms.Label();
             this.btPridat = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
+            this.dtpDatumNarozeni = new System.Windows.Forms.DateTimePicker();
+            this.cmbZemeNarozeni = new System.Windows.Forms.ComboBox();
+            this.cmbZemeKlubu = new System.Windows.Forms.ComboBox();
+            this.cmbKlub = new System.Windows.Forms.ComboBox();
+            this.cmbLigaKlubu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numVyska)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numVaha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCisloDresu)).BeginInit();
@@ -76,8 +76,9 @@
             0,
             0});
             this.numVyska.Name = "numVyska";
-            this.numVyska.Size = new System.Drawing.Size(148, 24);
+            this.numVyska.Size = new System.Drawing.Size(197, 24);
             this.numVyska.TabIndex = 88;
+            this.numVyska.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numVyska.Value = new decimal(new int[] {
             180,
             0,
@@ -98,8 +99,9 @@
             0,
             0});
             this.numVaha.Name = "numVaha";
-            this.numVaha.Size = new System.Drawing.Size(149, 24);
+            this.numVaha.Size = new System.Drawing.Size(197, 24);
             this.numVaha.TabIndex = 87;
+            this.numVaha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numVaha.Value = new decimal(new int[] {
             50,
             0,
@@ -131,16 +133,10 @@
             // 
             this.cmbPozice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPozice.FormattingEnabled = true;
-            this.cmbPozice.Items.AddRange(new object[] {
-            "Brankář",
-            "Obránce",
-            "Záložník",
-            "Útočník"});
             this.cmbPozice.Location = new System.Drawing.Point(154, 190);
             this.cmbPozice.Name = "cmbPozice";
-            this.cmbPozice.Size = new System.Drawing.Size(121, 26);
+            this.cmbPozice.Size = new System.Drawing.Size(197, 26);
             this.cmbPozice.TabIndex = 85;
-            this.cmbPozice.SelectedIndexChanged += new System.EventHandler(this.cmbPozice_SelectedIndexChanged);
             // 
             // rbPravak
             // 
@@ -170,6 +166,7 @@
             this.numCisloDresu.Name = "numCisloDresu";
             this.numCisloDresu.Size = new System.Drawing.Size(150, 24);
             this.numCisloDresu.TabIndex = 82;
+            this.numCisloDresu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numCisloDresu.Value = new decimal(new int[] {
             1,
             0,
@@ -208,7 +205,7 @@
             // 
             this.tbJmeno.Location = new System.Drawing.Point(153, 12);
             this.tbJmeno.Name = "tbJmeno";
-            this.tbJmeno.Size = new System.Drawing.Size(150, 24);
+            this.tbJmeno.Size = new System.Drawing.Size(198, 24);
             this.tbJmeno.TabIndex = 78;
             this.tbJmeno.TextChanged += new System.EventHandler(this.NovaPolozka_TextChanged);
             // 
@@ -229,46 +226,6 @@
             this.label1.Size = new System.Drawing.Size(58, 18);
             this.label1.TabIndex = 76;
             this.label1.Text = "Jméno:";
-            // 
-            // tbZemeNarozeni
-            // 
-            this.tbZemeNarozeni.Location = new System.Drawing.Point(152, 72);
-            this.tbZemeNarozeni.Name = "tbZemeNarozeni";
-            this.tbZemeNarozeni.Size = new System.Drawing.Size(150, 24);
-            this.tbZemeNarozeni.TabIndex = 75;
-            this.tbZemeNarozeni.TextChanged += new System.EventHandler(this.NovaPolozka_TextChanged);
-            // 
-            // tbDatumNarozeni
-            // 
-            this.tbDatumNarozeni.Location = new System.Drawing.Point(152, 42);
-            this.tbDatumNarozeni.Name = "tbDatumNarozeni";
-            this.tbDatumNarozeni.Size = new System.Drawing.Size(150, 24);
-            this.tbDatumNarozeni.TabIndex = 74;
-            this.tbDatumNarozeni.TextChanged += new System.EventHandler(this.NovaPolozka_TextChanged);
-            // 
-            // tbZemeKlubu
-            // 
-            this.tbZemeKlubu.Location = new System.Drawing.Point(516, 39);
-            this.tbZemeKlubu.Name = "tbZemeKlubu";
-            this.tbZemeKlubu.Size = new System.Drawing.Size(150, 24);
-            this.tbZemeKlubu.TabIndex = 73;
-            this.tbZemeKlubu.TextChanged += new System.EventHandler(this.NovaPolozka_TextChanged);
-            // 
-            // tbLigaKlubu
-            // 
-            this.tbLigaKlubu.Location = new System.Drawing.Point(516, 69);
-            this.tbLigaKlubu.Name = "tbLigaKlubu";
-            this.tbLigaKlubu.Size = new System.Drawing.Size(150, 24);
-            this.tbLigaKlubu.TabIndex = 72;
-            this.tbLigaKlubu.TextChanged += new System.EventHandler(this.NovaPolozka_TextChanged);
-            // 
-            // tbKlub
-            // 
-            this.tbKlub.Location = new System.Drawing.Point(516, 99);
-            this.tbKlub.Name = "tbKlub";
-            this.tbKlub.Size = new System.Drawing.Size(150, 24);
-            this.tbKlub.TabIndex = 71;
-            this.tbKlub.TextChanged += new System.EventHandler(this.NovaPolozka_TextChanged);
             // 
             // lbCisloDresu
             // 
@@ -345,7 +302,7 @@
             // lbDatumNarozeni
             // 
             this.lbDatumNarozeni.AutoSize = true;
-            this.lbDatumNarozeni.Location = new System.Drawing.Point(29, 45);
+            this.lbDatumNarozeni.Location = new System.Drawing.Point(29, 47);
             this.lbDatumNarozeni.Name = "lbDatumNarozeni";
             this.lbDatumNarozeni.Size = new System.Drawing.Size(117, 18);
             this.lbDatumNarozeni.TabIndex = 62;
@@ -372,12 +329,62 @@
             this.btExit.UseVisualStyleBackColor = true;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
+            // dtpDatumNarozeni
+            // 
+            this.dtpDatumNarozeni.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDatumNarozeni.Location = new System.Drawing.Point(152, 42);
+            this.dtpDatumNarozeni.MinDate = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+            this.dtpDatumNarozeni.Name = "dtpDatumNarozeni";
+            this.dtpDatumNarozeni.Size = new System.Drawing.Size(199, 24);
+            this.dtpDatumNarozeni.TabIndex = 90;
+            // 
+            // cmbZemeNarozeni
+            // 
+            this.cmbZemeNarozeni.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbZemeNarozeni.FormattingEnabled = true;
+            this.cmbZemeNarozeni.Location = new System.Drawing.Point(152, 72);
+            this.cmbZemeNarozeni.Name = "cmbZemeNarozeni";
+            this.cmbZemeNarozeni.Size = new System.Drawing.Size(199, 26);
+            this.cmbZemeNarozeni.TabIndex = 91;
+            // 
+            // cmbZemeKlubu
+            // 
+            this.cmbZemeKlubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbZemeKlubu.FormattingEnabled = true;
+            this.cmbZemeKlubu.Location = new System.Drawing.Point(516, 39);
+            this.cmbZemeKlubu.Name = "cmbZemeKlubu";
+            this.cmbZemeKlubu.Size = new System.Drawing.Size(150, 26);
+            this.cmbZemeKlubu.TabIndex = 92;
+            // 
+            // cmbKlub
+            // 
+            this.cmbKlub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKlub.FormattingEnabled = true;
+            this.cmbKlub.Location = new System.Drawing.Point(516, 101);
+            this.cmbKlub.Name = "cmbKlub";
+            this.cmbKlub.Size = new System.Drawing.Size(150, 26);
+            this.cmbKlub.TabIndex = 93;
+            // 
+            // cmbLigaKlubu
+            // 
+            this.cmbLigaKlubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLigaKlubu.FormattingEnabled = true;
+            this.cmbLigaKlubu.Location = new System.Drawing.Point(516, 69);
+            this.cmbLigaKlubu.Name = "cmbLigaKlubu";
+            this.cmbLigaKlubu.Size = new System.Drawing.Size(150, 26);
+            this.cmbLigaKlubu.TabIndex = 94;
+            // 
             // NovaPolozka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 336);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbLigaKlubu);
+            this.Controls.Add(this.cmbKlub);
+            this.Controls.Add(this.cmbZemeKlubu);
+            this.Controls.Add(this.cmbZemeNarozeni);
+            this.Controls.Add(this.dtpDatumNarozeni);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.numVyska);
             this.Controls.Add(this.numVaha);
@@ -392,11 +399,6 @@
             this.Controls.Add(this.tbJmeno);
             this.Controls.Add(this.lbPrijmeni);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbZemeNarozeni);
-            this.Controls.Add(this.tbDatumNarozeni);
-            this.Controls.Add(this.tbZemeKlubu);
-            this.Controls.Add(this.tbLigaKlubu);
-            this.Controls.Add(this.tbKlub);
             this.Controls.Add(this.lbCisloDresu);
             this.Controls.Add(this.lbPozice);
             this.Controls.Add(this.lbKlub);
@@ -413,6 +415,7 @@
             this.Name = "NovaPolozka";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nová Položka";
+            this.Load += new System.EventHandler(this.NovaPolozka_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numVyska)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numVaha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCisloDresu)).EndInit();
@@ -435,11 +438,6 @@
         private System.Windows.Forms.TextBox tbJmeno;
         private System.Windows.Forms.Label lbPrijmeni;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbZemeNarozeni;
-        private System.Windows.Forms.TextBox tbDatumNarozeni;
-        private System.Windows.Forms.TextBox tbZemeKlubu;
-        private System.Windows.Forms.TextBox tbLigaKlubu;
-        private System.Windows.Forms.TextBox tbKlub;
         private System.Windows.Forms.Label lbCisloDresu;
         private System.Windows.Forms.Label lbPozice;
         private System.Windows.Forms.Label lbKlub;
@@ -451,5 +449,10 @@
         private System.Windows.Forms.Label lbDatumNarozeni;
         private System.Windows.Forms.Button btPridat;
         private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.DateTimePicker dtpDatumNarozeni;
+        private System.Windows.Forms.ComboBox cmbZemeNarozeni;
+        private System.Windows.Forms.ComboBox cmbZemeKlubu;
+        private System.Windows.Forms.ComboBox cmbKlub;
+        private System.Windows.Forms.ComboBox cmbLigaKlubu;
     }
 }
